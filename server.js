@@ -22,3 +22,12 @@ app.use(express.static("Develop/public"));
 app.get("/", (req, res) => 
 res.sendFile(path.join(__dirname, "Develop/public/index.html"))
 );
+
+app.get("api/notes", function(req, res) {
+    fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
+        let jsonData = JSON.parse(data);
+        console.log(jsonData);
+        res.json(jsonData)
+    });
+});
+
