@@ -4,6 +4,7 @@ const express = require("express");
 const fs = require("fs");
 // import path
 const path = require("path");
+const { PassThrough } = require("stream");
 // helper method to generate unique IDs
 const uniqid = require("uniqid");
 
@@ -38,3 +39,15 @@ app.get("api/notes", function(req, res) {
     });
 });
 
+// Reads the newly added notes from the request body then adds them to the db.json file
+const readThenAppendToJson = (content, file) => {
+    fs.readFile(file, "utf8", (err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            const parsedData = JSON.parse(data);
+            parsedData.push(content);
+            writeNewNoteToJson(file, parsedData);
+        }
+    });
+};
