@@ -2,20 +2,5 @@
     {
         "title": "Test Title",
         "text": "Test text"
-    },
-    {
-        "title": "Test title ",
-        "text": "This is a sample test. If successful, we can add a note to the app and it should save it. If not, then we need to debug.",
-        "id": "1gg7q94tlk0g6sj1"
-    },
-    {
-        "title": "Testing notes",
-        "text": "Note testing is not working.",
-        "id": "1gg7q94tlk0g9hvy"
-    },
-    {
-        "title": "Testing notes ",
-        "text": "We are writing notes but it is not being added to the left hand column for some reason.",
-        "id": "1gg7q94tlk0gax2u"
     }
 ]

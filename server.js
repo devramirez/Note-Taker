@@ -31,7 +31,7 @@ res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
 
 
 // get route which reads the db.json file and sends back parsed JSON data
-app.get("api/notes", function(req, res) {
+app.get("/api/notes", function(req, res) {
     fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
         let jsonData = JSON.parse(data);
         console.log(jsonData);
