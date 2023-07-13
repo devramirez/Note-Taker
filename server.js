@@ -80,3 +80,19 @@ app.post("/api/notes", (req, res) => {
         res.json("Error in posting new note")
     }
 });
+
+// Delete route -> reads the db.json file, uses the json objects uniqids to match the object to be deleted, removes that object from the db.json, then re-writes the db.json file
+app.delete("/api/notes/:id", (req, res) => {
+    let id = req.params.id;
+    let parsedData;
+    fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            parsedData = JSON.parse(data);
+            const filterData = parsedData.filter((note) => note.id !== id);
+            writeNewNoteToJson("Develop/db/db.json", filterData);
+        }
+    });
+    res.send(`Deleted note with ${req.params.id}`);
+});
