@@ -57,3 +57,26 @@ const writeNewNoteToJson = (destination, content) =>
 fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
 err ? console.error(err): console.info(`\nData written to ${destination}`)
 );
+
+// Post route -> receives a new note, saves it to the request body then adds it to db.json file then returns the new note
+app.post("/api/notes", (req, res) => {
+    const {title, text } = req.body;
+    if (title && text) {
+        const newNote = {
+            title: title,
+            text: text,
+            id: uniqid(),
+        };
+        
+        readThenAppendToJson(newNote, "Develop/db/db.json");
+
+        const response = {
+            status: "success",
+            body: newNote,
+        };
+
+        res.json(response);
+    } else {
+        res.json("Error in posting new note")
+    }
+});
