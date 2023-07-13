@@ -19,12 +19,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("Develop/public"));
 
-// get route which sends back to notes.html
+// get route which sends back to index.html
 app.get("/", (req, res) => 
 res.sendFile(path.join(__dirname, "Develop/public/index.html"))
 );
 
-// get route to send to index.html
+// get route to send to notes.html
 app.get("/notes", (req, res) =>
 res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
 );
