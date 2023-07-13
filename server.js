@@ -96,3 +96,8 @@ app.delete("/api/notes/:id", (req, res) => {
     });
     res.send(`Deleted note with ${req.params.id}`);
 });
+
+// app.listen method is used to initialize our local server
+app.listen(PORT, () => 
+    console.log(`App is listening at http://localhost:${PORT} `)
+)
