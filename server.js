@@ -4,7 +4,7 @@ const express = require("express");
 const fs = require("fs");
 // import path
 const path = require("path");
-const { PassThrough } = require("stream");
+
 // helper method to generate unique IDs
 const uniqid = require("uniqid");
 
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("Develop/public"));
 
-// get route which sends back to index.html
+// get route which sends back to notes.html
 app.get("/", (req, res) => 
 res.sendFile(path.join(__dirname, "Develop/public/index.html"))
 );
@@ -43,7 +43,7 @@ app.get("api/notes", function(req, res) {
 const readThenAppendToJson = (content, file) => {
     fs.readFile(file, "utf8", (err, data) => {
         if (err) {
-            console.log(err);
+            console.error(err);
         } else {
             const parsedData = JSON.parse(data);
             parsedData.push(content);
@@ -100,4 +100,4 @@ app.delete("/api/notes/:id", (req, res) => {
 // app.listen method is used to initialize our local server
 app.listen(PORT, () => 
     console.log(`App is listening at http://localhost:${PORT} `)
-)
+);
