@@ -20,6 +20,7 @@ Key features of the Note Taker application include:
 - [Contributing](#contributing)📜
 - [Sources](#sources)🔎
 - [Demo](#Demo)🎞
+- [Cloud-Link](#Cloud-Link)
 - [License](#license)💳
 - [Contact](#contact)📩
 - [Deployed Site](#deployedsite)🧮
@@ -67,13 +68,22 @@ N/A
 
 You may contact me by aramirezdev1@gmail.com
 
+## Google Drive Link of Recording
+Google Drive link: 
+
+https://drive.google.com/file/d/1G2XLEjCq4wtC-ejakp59Bxo3vIb3VFlD/view
+
 ## Demo <a name="Demo"></a>
 
+https://github.com/devramirez/Note-Taker/assets/45980046/340f4902-d3e8-4764-b691-a1cfdda8112a
+
 ## Deployed Site <a name="Heroku Deployment"></a>
+Heroku Deployment:
 
 https://cryptic-falls-13168-f4300baf1082.herokuapp.com/
 
 ## Repository <a name="Note Taker"></a>
+Github Repo:
 
 https://github.com/devramirez/Note-Taker
 
