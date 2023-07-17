@@ -76,8 +76,7 @@ https://drive.google.com/file/d/1G2XLEjCq4wtC-ejakp59Bxo3vIb3VFlD/view
 ## Screenshots of Application
 ![note-taker-1](https://github.com/devramirez/Note-Taker/assets/45980046/c4b9c55e-e278-4785-8730-a9b803c0d03d)
 ![note-taker-2](https://github.com/devramirez/Note-Taker/assets/45980046/65557c7e-a2ad-4ff0-941f-f72a22bb4809)
-![note-taker-3](<img width="1885" alt="Note-taker-3" src="https://github.com/devramirez/Note-Taker/assets/45980046/98c5d71a-b8f0-41bb-aaf8-fbb963136df2">)
-![note-taker-4](<img width="1881" alt="Note-taker-4" src="https://github.com/devramirez/Note-Taker/assets/45980046/b1192b75-5926-4cae-86af-585e54b29588">)
+![note-taker3](https://github.com/devramirez/Note-Taker/assets/45980046/c96a9586-d390-4e79-a37d-2ec3f0331232)
 
 ## Demo <a name="Demo"></a>
 
